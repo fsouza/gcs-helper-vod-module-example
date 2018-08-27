@@ -1,0 +1,20 @@
+version: "3.2"
+services:
+  packager:
+    image: nytimes/nginx-vod-module:v1.2.0
+    ports:
+      - 1988:80
+    volumes:
+      - type: bind
+        source: ./nginx.conf
+        target: /usr/local/nginx/conf/nginx.conf
+    depends_on:
+      - gcs_helper
+  gcs_helper:
+    image: nytimes/gcs-helper:v1.15.0
+    env_file:
+      - gcs_helper.env
+    volumes:
+      - type: bind
+        source: $HOME/.config/gcloud/application_default_credentials.json
+        target: /etc/google-creds.json
