@@ -32,4 +32,4 @@ After that, HLS and DASH manifest will be available at the following locations:
 
 - HLS: http://localhost:1988/videos/hls/devito/master.m3u8
 - DASH: http://localhost:1988/videos/dash/devito/manifest.mpd
-- Thumb: http://localhost:1988/videos/t/devito720p/thumb-7000.jpg
+- Thumb: http://localhost:1988/videos/thumb/devito720p/thumb-7000.jpg
