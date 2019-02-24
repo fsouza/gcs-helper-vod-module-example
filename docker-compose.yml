@@ -11,7 +11,7 @@ services:
     depends_on:
       - gcs_helper
   gcs_helper:
-    image: nytimes/gcs-helper:v3.2.0
+    image: nytimes/gcs-helper:v3.2.1
     env_file:
       - gcs_helper.env
     volumes:
